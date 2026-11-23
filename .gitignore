@@ -1,0 +1,11 @@
+# Fail APK (471 MB) - terlalu besar untuk GitHub Pages.
+# Ia dinaikkan ke GitHub Releases; lihat $ApkBase dalam BUILD-DEPLOY.ps1
+apk/
+docs/apk/
+
+# Output lama sebelum folder docs digunakan
+deploy/
+
+# Windows
+Thumbs.db
+desktop.ini

@@ -1,0 +1,11 @@
+powershell -ExecutionPolicy Bypass -File D:\PERSONAL\PROJECT\portfolio\build.ps1
+
+1. Buka portfolio-editable\content.js dengan Notepad (atau VS Code) → ubah teks → Ctrl + S
+
+2. Klik dua kali BUILD.bat
+
+3. Klik dua kali portfolio.html
+
+Itu sahaja. Tiga klik, tiada arahan, tiada terminal.
+
+Bila anda klik BUILD.bat, tetingkap hitam akan papar:

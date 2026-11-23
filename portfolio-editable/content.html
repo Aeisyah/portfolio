@@ -1,0 +1,165 @@
+/* ============================================================================
+   CONTENT.JS  —  SEMUA TEKS ADA DI SINI. EDIT FAIL INI SAHAJA.
+   ----------------------------------------------------------------------------
+   Tak perlu sentuh index.html atau styles.css untuk tukar ayat / nama / link.
+   Lepas edit, simpan (Ctrl+S) dan refresh browser.
+   ========================================================================== */
+
+const CONTENT = {
+
+  /* ==========================================================================
+     1. MAKLUMAT DIRI  —  << TUKAR BAHAGIAN INI DULU >>
+     ========================================================================== */
+  profile: {
+    name:      'Nama Anda',                      // << TUKAR
+    role:      'Software Engineer · Mobile Developer · Full Stack',
+    roleShort: 'Software Engineer',
+    location:  'Kuala Lumpur, Malaysia',         // << TUKAR
+    email:     'rndteam2@smart-acc.com',         // << TUKAR jika perlu
+    phone:     '+60 12-345 6789',                // << TUKAR
+    linkedin:  'https://www.linkedin.com/in/username',   // << TUKAR link LinkedIn
+    linkedinLabel: 'linkedin.com/in/username',   // << TUKAR teks yang dipapar
+    github:    'https://github.com/username',    // << TUKAR (kosongkan '' jika tiada)
+    githubLabel: 'github.com/username',
+
+    // Perenggan pengenalan diri
+    intro:
+      'Saya seorang Software Engineer yang membina produk mudah alih end-to-end — ' +
+      'dari reka bentuk antara muka, logik aplikasi, sehingga backend dan security ' +
+      'rules. Bekerja merentas full stack dengan Flutter di bahagian hadapan dan ' +
+      'Firebase di bahagian belakang. Portfolio ini memaparkan empat sistem lengkap ' +
+      'yang saya bangunkan, setiap satu dengan identiti visual, seni bina dan cabaran ' +
+      'teknikal tersendiri.',
+
+    // Kekuatan utama (papar sebagai kad kecil)
+    strengths: [
+      { icon: '📱', title: 'Mobile Development',  desc: 'Flutter & Dart — satu kod asas untuk Android, iOS, desktop dan web.' },
+      { icon: '🔥', title: 'Backend & Data',      desc: 'Firebase Auth, Cloud Firestore, security rules dan aliran data masa nyata.' },
+      { icon: '🎨', title: 'Reka Bentuk UI',      desc: 'Sistem tema tersendiri, glassmorphism dan susun atur responsif.' },
+      { icon: '🧠', title: 'Seni Bina Perisian',  desc: 'Provider + ChangeNotifier, lapisan repository, kod yang boleh diuji.' },
+    ],
+
+    // Senarai kemahiran
+    skills: [
+      'Flutter', 'Dart', 'Firebase Auth', 'Cloud Firestore', 'Firestore Rules',
+      'Provider', 'REST / JSON API', 'Responsive Design', 'Material 3',
+      'State Management', 'Git', 'Android / iOS / Web / Desktop',
+    ],
+
+    // Statistik ringkas di bahagian atas
+    stats: [
+      { value: '4',  label: 'Sistem lengkap' },
+      { value: '30+', label: 'Skrin direka' },
+      { value: '4',  label: 'Platform disokong' },
+    ],
+  },
+
+  /* ==========================================================================
+     2. SISTEM  —  susunan di sini = susunan menu
+     ========================================================================== */
+  systems: [
+    {
+      id: 'ladydriver',
+      no: '01',
+      name: 'LadyDriver',
+      emoji: '💕',
+      tagline: 'Aplikasi e-hailing khas wanita',
+      accent: '#FF6FA5',
+      accentSoft: 'rgba(255,111,165,.14)',
+      summary:
+        'Platform tempahan kenderaan gaya Grab yang dikhaskan untuk wanita — pendaftaran ' +
+        'menapis jantina di tiga lapisan (UI, AuthService dan Firestore security rules). ' +
+        'Padanan penunggang–pemandu berlaku secara masa nyata melalui Firestore, dengan ' +
+        'transaksi yang menghalang dua pemandu menerima trip yang sama.',
+      tech: ['Flutter 3.41', 'Dart 3.11', 'Firebase Auth', 'Cloud Firestore', 'Provider', 'Poppins'],
+      features: [
+        { title: 'Khas wanita sahaja',      desc: 'Pilihan "Male" menyekat pendaftaran — dikuatkuasakan di UI, service dan security rules.' },
+        { title: 'Padanan masa nyata',      desc: 'Permintaan penunggang di-stream kepada semua pemandu yang online; pemandu pertama menerima akan menang.' },
+        { title: 'Transaction-guarded',     desc: 'Firestore transaction menghalang dua pemandu menerima trip yang sama serentak.' },
+        { title: 'Peta lukisan tersendiri', desc: 'CustomPainter melukis peta merah jambu — tiada Maps API key diperlukan.' },
+        { title: 'Anggaran tambang',        desc: 'Pemilih lokasi boleh cari, dengan pengiraan tambang sebelum tempahan disahkan.' },
+        { title: 'Glassmorphism',           desc: 'GlassCard, GlassButton dan GlassTextField di atas gradient merah jambu lembut.' },
+      ],
+      // Kapsyen di bawah setiap skrin (ikut susunan mockup dalam index.html)
+      captions: ['Skrin Selamat Datang', 'Utama Penunggang', 'Papan Pemuka Pemandu'],
+    },
+
+    {
+      id: 'rembayung',
+      no: '02',
+      name: 'Rembayung Order',
+      emoji: '🌶️',
+      tagline: 'Sistem tempahan produk makanan',
+      accent: '#7A1F1F',
+      accentSoft: 'rgba(194,65,12,.14)',
+      summary:
+        'Kedai dalam talian bertema warisan Melayu untuk produk sambal dan rempah. ' +
+        'Katalog dwibahasa (BM / EN) dibina di atas model L10nText tersendiri, lengkap ' +
+        'dengan carian, penapis kategori, troli dan aliran pembayaran sehingga pengesahan pesanan.',
+      tech: ['Flutter', 'Provider', 'Playfair Display', 'Inter', 'l10n dwibahasa', 'Material 3'],
+      features: [
+        { title: 'Dwibahasa BM / EN',    desc: 'Setiap nama, tagline dan penerangan produk disimpan sebagai L10nText — tukar bahasa serta-merta.' },
+        { title: 'Katalog & penapis',    desc: 'Kategori sambal, mi, rempah dan istimewa dengan penapis dan carian segera.' },
+        { title: 'Aliran pesanan penuh', desc: 'Produk → troli → checkout → pengesahan → sejarah pesanan.' },
+        { title: 'Halaman cerita',       desc: 'Skrin naratif jenama yang menceritakan asal usul resipi kampung.' },
+        { title: 'Tahap kepedasan',      desc: 'Penunjuk pedas 1–5 dan lencana "best seller" pada kad produk.' },
+        { title: 'Identiti warisan',     desc: 'Palet krim–maroon–emas dengan tipografi serif Playfair Display.' },
+      ],
+      captions: ['Halaman Utama', 'Katalog Produk', 'Troli & Pembayaran'],
+    },
+
+    {
+      id: 'sedekah',
+      no: '03',
+      name: 'SedekahApps',
+      emoji: '🕌',
+      tagline: 'Direktori QR sedekah masjid & surau',
+      accent: '#0F7B6C',
+      accentSoft: 'rgba(15,123,108,.14)',
+      summary:
+        'Direktori institusi — masjid, surau dan pertubuhan — yang memaparkan kod QR ' +
+        'DuitNow untuk sumbangan segera. Data diambil dari Cloud Firestore dengan sandaran ' +
+        'senarai tempatan apabila tiada sambungan, jadi aplikasi sentiasa boleh digunakan.',
+      tech: ['Flutter', 'Cloud Firestore', 'Firestore Rules', 'Material 3', 'Tema Terang / Gelap'],
+      features: [
+        { title: 'Direktori institusi',   desc: 'Masjid, surau dan pertubuhan boleh ditapis mengikut negeri dan kategori.' },
+        { title: 'QR DuitNow',            desc: 'Setiap institusi membawa payload QR sendiri — imbas dan terus menyumbang.' },
+        { title: 'Berbilang kaedah bayar',desc: 'Menyokong DuitNow, Touch \'n Go eWallet dan Boost.' },
+        { title: 'Sandaran luar talian',  desc: 'Senarai contoh tempatan digunakan apabila Firestore kosong atau tiada internet.' },
+        { title: 'Kalendar & papan pendahulu', desc: 'Penjejak amalan harian dan papan pendahulu penyumbang komuniti.' },
+        { title: 'Tema terang & gelap',   desc: 'Satu sistem tema hijau, gradient penuh skrin di kedua-dua mod.' },
+      ],
+      captions: ['Direktori Utama', 'Butiran & Kod QR', 'Papan Pendahulu'],
+    },
+
+    {
+      id: 'cinema',
+      no: '04',
+      name: 'Cinema Booking',
+      emoji: '🎬',
+      tagline: 'Tempahan tiket dengan kunci tempat duduk masa nyata',
+      accent: '#0A84FF',
+      accentSoft: 'rgba(10,132,255,.14)',
+      summary:
+        'Aplikasi tempahan tiket wayang sembilan skrin dengan ciri utama: kunci tempat duduk ' +
+        'masa nyata. Apabila pengguna lain memilih kerusi, kerusi itu bertukar kuning dan ' +
+        'terus terkunci pada skrin anda — first-come-first-served dikuatkuasakan oleh ' +
+        'Firestore transaction.',
+      tech: ['Flutter', 'Provider', 'Cloud Firestore', 'JSON API', 'Responsive', 'Frosted Glass'],
+      features: [
+        { title: 'Kunci kerusi masa nyata', desc: 'Stream<Set<String>> menyiarkan kerusi yang sedang dikunci pengguna lain — peta kerusi bertindak balas serta-merta.' },
+        { title: 'First-come-first-served', desc: 'Firestore transaction memastikan hanya seorang boleh memenangi sesuatu kerusi.' },
+        { title: 'Dua backend boleh tukar', desc: 'Mock (simulasi setempat) atau Firestore sebenar — dipilih automatik semasa but.' },
+        { title: 'JSON sebagai API',        desc: 'movies.json, cinemas.json dan food.json dibaca dengan simulasi latency serta keadaan loading / ralat.' },
+        { title: '9 skrin lengkap',         desc: 'Utama → butiran → kerusi → makanan → ringkasan → bayaran → berjaya, semua melalui named routes.' },
+        { title: 'Responsif penuh',         desc: 'Satu kod asas untuk telefon, tablet, desktop dan web.' },
+      ],
+      captions: ['Senarai Filem', 'Pemilihan Kerusi', 'Tiket Berjaya'],
+    },
+  ],
+
+  /* ==========================================================================
+     3. TEKS FOOTER
+     ========================================================================== */
+  footer: 'Dibina dengan Flutter · Portfolio ' + new Date().getFullYear(),
+};
